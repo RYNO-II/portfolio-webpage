@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matthew Pretorius</title>
+	<link rel="stylesheet" href="stacked-poetic.css">
+	<style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    
+    #container {
+      position: fixed;
+      top: -1%;
+      left: -1%;
+      width: 102%;
+      height: 102%;
+      z-index: -5;
+    }
+      
+    #water {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(grey, white, black 90%),
+      conic-gradient(from 250deg at 47% 80%, grey, white, black 59%);
+      filter: url('#turbulence');
+      background-blend-mode: overlay;
+      z-index: -5;
+    }
+    
+    #cow {
+    position: absolute; /* Ensure SVG is positioned */
+    margin-left: -500px;
+    margin-top: 100px;
+    z-index: -1; /* Higher z-index to place SVG on top */
+    }
+
+    svg {
+        border: 0px solid #6bdf0c; /* Optional: helps visualize SVG boundaries */
+      }
+
+  </style>
+	</head>
+<body>
+	<div class="stack" onclick="moveCard()">
+		<div class="pre-container card  ">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		<span class="grid-image"> <p class="heading-main">Scientist By <span style="color:gold;">Day,</span> Web Dev By <span style="color:rgb(33, 12, 68);">Night.</span></p>
+			<span class="heading-main1">Hi, I'm Matthew.  While I am a natural science lover at heart, I have had a growing interest in computers and programming for some time <br>now.<br><br> I made this portfolio website to show just how committed I am to learning web development (and to maybe flex some creative muscle).<br><br> One day I hope to be able to use <span style="color: rgb(1, 173, 216);">Go</span> to build something cool, so come back every once in a while to see my progress.
+			<br><br>Thank you for visiting!</span>
+			<h2 class="card-titleA">A<br>B<br>O<br>U<br>T<br></h2></span>	
+		</div>
+		<div class="pre-container card  ">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<span class="grid-image"> <p class="heading-main">Yeah, theres nothing here (for now...)</p>
+				<span class="heading-main1">However, I can use this space to talk about <br>how this page was made! Everything you <br>see is  made using SVGs instead of images.<br> This was done to keep all the page elements looking sharp at any screen resolution and to improve site responsiveness. Even the flowing cape is a bunch of SVG paths animated using <span style="color:palegreen;">GSAP.</span>
+			<br><br>The water flowing effect is made using the<br> SVG feTurbulence filter primitive with a<br> gradient applied to it to make the wave effect more noticeable .</span>
+			<h2 class="card-titleB">P<br>R<br>O<br>J<br>E<br>C<br>T<br>S</h2></span>
+		</div>
+		<div class="pre-container card  ">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+				<span class="grid-image"> <p class="heading-main">COMING SOON...</p>
+				
+			<h2 class="card-titleC">C<br>O<br>M<br>I<br>N<br>G<br><br>S<br>O<br>O<br>N</h2></span>	
+		</div>
+	</div>
+
+  <div id="container">
+    <div id="water"></div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <filter id="turbulence" filterUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%">
+      <feTurbulence id="feturbulence" type="fractalNoise" numOctaves="3" seed="2"></feTurbulence>
+      <feDisplacementMap xChannelSelector="G" yChannelSelector="B" scale="20" in="SourceGraphic"></feDisplacementMap>
+    </filter>
+  </svg>
+
+  <svg version="1.1" id="cow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1100px" height="1100px" viewBox="0 0 1100 1100" xml:space="preserve">
+  
+  <g id="saitamaSVG" transform="translate(280,-140) scale(0.9)">
+
+    <path id="head" transform="translate(386.870411996706, 213.634197603964)" fill="url(#headG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M19.4557 83.7725L17.3474 81.8086L17.7224 77.1826C-6.58375 53.2851 -5.88813 28.6055 19.8093 3.14378C48.4002 -6.15119 67.6143 5.16512 77.4517 37.0927L76.5677 64.853L68.6109 71L41 72.1025Z"/>
+
+    <path id="collar" transform="translate(387.588969121631, 284.315263155674)" fill="url(#headG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M 0 35.008 L 2.7506 26.5061 C 23 5 41 -4 75 0 C 69.0158 0 46.0106 11.6693 0 38 Z"/>
+
+    <path id="glove" transform="translate(506.616291508866, 414.295476832253)" fill="url(#gloveG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M0 40.809C15.6703 79.8179 28.6732 105.407 39.009 117.577L39.7591 126.329L46.0106 129.079C44.8436 143.249 48.5111 152.668 57.0131 157.336C54.6792 169.172 56.3463 175.923 62.0142 177.59C59.6804 182.925 62.1809 186.342 69.516 187.843C72.1832 190.51 76.6009 191.427 82.769 190.593C82.1022 190.927 85.1862 190.427 92.0211 189.093C99.9802 181.095 105.065 174.427 107.275 169.088C110.589 161.08 83.5472 125.216 83.0191 122.328C83.8526 119.66 81.7688 116.076 76.7676 111.575L76.0174 105.574C73.6836 104.24 72.6834 102.073 73.0168 99.0724C73.3502 96.0717 71.3497 67.8152 67.0154 14.3029C61.1883 -6.87324 17.065 -9.43287 0 40.809Z"/>
+
+    <path id="leftboot" transform="matrix(0.999999963045392 0 0 0.999999963045392 317.542047909518 946.645598534537)" fill="url(#leftbootG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M3.02767 12.4113L3.3813 180.476L4.97266 183.836C4.97266 188.138 4.50115 190.496 3.55812 190.908C2.6151 191.321 2.37934 193.03 2.85085 196.036L5.06107 197.185L5.06107 202.667C1.46578 210.977 -0.213994 218.315 0.021762 224.68C0.257518 231.046 1.55418 239.386 3.91174 249.7C3.61705 253.649 11.0434 255.564 26.1907 255.447C48.9117 255.27 46.2289 255.818 59.2944 243.44C65.3792 241.606 70.9429 238.022 75.9858 232.688C65.5396 217.271 59.4618 205.289 57.7526 196.743C55.1888 183.924 59.9196 185.739 59.2319 177.612C57.2437 175.808 57.34 171.842 59.5208 165.712C68.6563 90.1519 76.8783 41.0557 84.1868 18.4231C58.6189 -5.27209 31.9216 -4.81665 3.02767 12.4113Z"/>
+
+    <path id="leftear" transform="translate(393.521597199215, 282.217238557504)" fill="#A0A0A0" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M4.14047 2.45859C3.56788 0.713622 2.52141 -0.438996 0.0736739 0.159962C-0.515717 9.23658 2.43124 13.8928 8.91454 14.1285C12.5205 11.8922 10.9078 7.99546 4.14047 2.45859Z" />
+      <path id="leftearinner" transform="translate(397, 284)" fill="#A0A0A0" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M0.198919 0C-0.50835 4.47937 0.670432 7.5442 3.73527 9.1945" />
+
+
+    <path id="leftleg" transform="matrix(0.999999963045392 0 0 0.999999963045392 324.755780365872 687.465534895061)" fill="url(#leftlegG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M122.847 25.1981L96.5998 123.419C95.3031 157.25 93.535 174.754 91.2953 175.933L85.3719 185.747L84.8414 191.316C84.8393 221.186 81.004 248.208 73.3356 273C51.5806 257.793 27.4084 256.043 0.81893 269C-2.75349 235.683 5.36207 206.876 25.1656 180.707C28.9391 176.974 30.1173 168.231 28.7003 154.478L32.1499 149.941C26.6685 70.9627 29.586 20.9823 40.9023 0Z"/>
+
+    <path id="rightboot" transform="matrix(0.999999963045392 0 0 0.999999963045392 466.44395233551 869.768728448389)"fill="url(#rightbootG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M0 48.442C19.6857 175.162 33.0648 241.764 40.1375 248.247L40.668 280.251C37.9568 286.38 36.0707 294.632 35.0098 305.005C33.4185 320.565 36.9548 313.492 43.6739 347.088C67.1316 354.278 91.2967 351.037 116.169 337.363C115.849 333.792 117.107 331.049 119.941 329.131C122.775 327.214 129.61 326.714 140.445 327.631C145.03 327.548 154.782 323.297 169.702 314.878C184.622 306.46 196.833 298.624 206.335 291.373C208.503 286.705 205.835 282.246 198.334 277.995C187.081 271.618 140.82 272.994 136.694 266.742C132.971 267.437 129.401 265.752 125.982 261.685C122.387 262.687 120.177 260.064 119.352 253.817C117.494 254.098 116.148 253.197 115.315 251.113C114.481 249.03 114.856 245.32 116.44 239.986L112.126 233.922L107.859 21.2121C77.6491 -10.6102 23.0869 -10.521 0 48.442Z"/>
+
+    <path id="rightear" transform="translate(447.921971522997, 246.577566556863)" fill=none stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M5.08387 6.27113C-1.75306 13.8153 -1.69412 20.0629 5.26069 25.0138C7.3825 30.4362 9.15067 30.4362 10.5652 25.0138C7.02886 20.0629 6.91099 14.0511 10.2116 6.9784C9.26145 2.06144 8.74637 -5.53822 5.08387 6.27113Z"/>
+      <path id="rightearinner0" transform="translate(454, 250) rotate(11)" fill=none stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M0.0188183 8.28088C-0.0336145 4.59405 0.0235215 1.83375 0.190226 0"/>
+      <path id="rightearinner1" transform="translate(452, 266) rotate(348)" fill=none stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M0.151889 0L0 4.96049"/>
+
+    <path id="rightleg" transform="matrix(0.999999963045392 0 0 0.999999963045392 447.701322014865 596.935090591989)" fill="url(#rightlegG)" stroke="#010101" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" stroke-miterlimit="11" d="M 0 115.639 C 6.7692 152.374 11.3207 172.325 13.6545 175.492 C 15.9884 178.66 16.9886 191.329 16.6552 213.501 L 19.906 223.503 C 15.405 274.181 16.8219 303.522 23 313 C 45 274 72 261 119 286 C 117.928 262.846 112.927 238.34 101.925 208.5 L 101.925 177.993 C 96.5487 175.395 94.1315 165.476 94.6731 148.236 C 95.4856 122.376 95.5043 12.2593 84.5186 0 Z"/>
+
+    </g>
+    <!-- MORPH this Path: #startingFrame / frame0 -->
+    <path id="startingFrame" transform="translate(-69,434) rotate(337) scale(0.9)" fill="url(#grad0)" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="11" d="M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C938.2887 -0.770105 953.5847 6.88847 957.7232 16.0711C1000.1483 31.0179 1014.2954 110.42 983.2232 305.571C919.1164 612.684 851.496 764.383 780.361 760.667C740.916 770.887 697.412 748.522 649.848 693.571C617.644 667.544 607.527 656.669 580.981 656.362C555.891 661.062 565.863 669.561 502.981 699.362C440.098 729.163 350.857 702.003 251.223 577.071C203.223 512.071 162.723 478.071 129.723 475.071C248.21 431.324 396.454 328.006 525.251 230.099C676.268 115.301 800.549 7.94482 818.774 12.7867Z"/>
+
+    <defs>
+      <linearGradient id="grad1" gradientUnits="userSpaceOnUse" x1="1" y1="0" x2="100%" y2="100%" spreadMethod="pad">
+       <stop stop-color="#ffffff" offset="0" stop-opacity="1"/>
+       <stop stop-color="#6b6a7b" offset="1" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+    
+    <defs>
+     <linearGradient id="grad0" gradientUnits="objectBoundingBox" x1="100%" y1="20%" x2="100%" y2="100%" spreadMethod="pad">
+       <stop stop-color="#ffffff" offset="0" stop-opacity="1"/>
+       <stop stop-color="#6b6a7b" offset="1" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+    
+   <g id="innerCape" transform="translate(-69,434) rotate(337) scale(0.9)">  <!--frame0-->
+        <path id="farright" fill=url(#grad1) fill-opacity="0.1"  stroke=none stroke-width="1" stroke-linecap="square" stroke-linejoin="square" stroke-miterlimit="11" d="M 971 124 C 911 286 799 492 570 659"/>
+
+        <path id="middle" fill=url(#grad0) fill-opacity="0.1" stroke=none stroke-width="1" stroke-linecap="square" stroke-linejoin="square" stroke-miterlimit="11" d="M 942 83 C 867 212 814 279 741 351"/>
+
+        <path id="topleft" fill=url(#grad0) fill-opacity="0.1"stroke=none stroke-width="1" stroke-linecap="square" stroke-linejoin="square" stroke-miterlimit="11" d="M 845 34 C 754 -27 854 95 407 397"/>
+    </g>
+    
+
+    
+    <defs>
+      <linearGradient id="leftbootG" x1="0%" x2="100%" y1="0%" y2="30%">
+        <stop offset="0%" stop-color="hsl(240, 2%, 39%)" />
+        <stop offset="6%" stop-color="hsl(240, 1%, 15%)" />
+        <stop offset="16%" stop-color="hsl(0, 0%, 0%)" />
+        <stop offset="33%" stop-color="hsl(0, 0%, 0%)" />
+        <stop offset="60%" stop-color="hsl(0, 0%, 18%)" />
+        <stop offset="100%" stop-color="hsl(0, 0%, 46%)" />
+      </linearGradient>
+    </defs>
+
+     <defs>
+      <linearGradient id="rightbootG" x1="0%" x2="80%" y1="20%" y2="0%">
+        <stop offset="0%" stop-color="hsl(240, 2%, 39%)" />
+        <stop offset="12%" stop-color="hsl(240, 1%, 15%)" />
+        <stop offset="32%" stop-color="hsl(0, 0%, 0%)" />
+        <stop offset="65%" stop-color="hsl(0, 0%, 0%)" />
+        <stop offset="85%" stop-color="hsl(0, 0%, 18%)" />
+        <stop offset="100%" stop-color="hsl(0, 0%, 46%)" />
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <linearGradient id="gloveG" x1="30%" x2="100%" y1="10%" y2="0%">
+        <stop offset="0%" stop-color="hsl(0, 0%, 0%)" />
+        <stop offset="22%" stop-color="hsl(0, %, 20%)" />
+        <stop offset="50%" stop-color="hsl(0, 0%, 40%)" />
+        <stop offset="102%" stop-color="hsl(0 0% 60%)" />
+        <stop offset="101%" stop-color="hsl(0 0% 80%)" />
+        <stop offset="100%" stop-color="hsl(0 0% 100%)" />
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <linearGradient id="rightlegG" x1="0%" x2="100%" y1="20%" y2="0%">
+        <stop stop-color=black offset="0%" stop-opacity="1"/>
+        <stop stop-color="#A0A0A0" offset="60%" stop-opacity="1"/>
+        <stop stop-color=white offset="100%" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <linearGradient id="leftlegG" x1="20%" x2="100%" y1="0%" y2="50%">
+         <stop offset="0%" stop-color="hsl(0, 0%, 63%)" />
+         <stop offset="7%" stop-color="hsl(0, 0%, 38%)" />
+         <stop offset="19%" stop-color="hsl(0, 0%, 13%)" />
+         <stop offset="70%" stop-color="hsl(0 0% 13%)" />
+         <stop offset="88%" stop-color="hsl(0 0% 38%)" />
+         <stop offset="100%" stop-color="hsl(0 0% 63%)" />
+      </linearGradient>
+    </defs>
+
+    <defs>
+      <radialGradient id="headG" cx="90%" cy="74%" r="100%" fx="69%" fy="5%">
+        <stop stop-color=white offset="0%" stop-opacity="1"/>
+        <stop stop-color="#A0A0A0" offset="70%" stop-opacity="1"/>
+        <stop stop-color=white offset="100%" stop-opacity="1"/>
+      </radialGradient>
+    </defs>
+</svg>
+</svg>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+	<script>
+		const stack = document.querySelector('.stack');
+
+   // converts stack's children to array, reverse + filter to only get elements containing 'card'class
+		const cards = Array.from(stack.children).reverse().filter((child)=> child.classList.contains('card'));
+
+		// append each card back to the stack in reversed order
+		cards.forEach((card)=>stack.appendChild(card));
+
+		function moveCard(){ //moves last card to 1st card position via animation
+			const lastCard = stack.lastElementChild;
+
+			if(lastCard.classList.contains('card')){
+				lastCard.classList.add('swap');
+
+				setTimeout(()=>{
+					lastCard.classList.remove('swap');
+					stack.insertBefore(lastCard,stack.firstElementChild);
+				}, 200)
+			}
+		};
+
+     // Get the feTurbulence element
+    const feTurb = document.querySelector('#feturbulence');
+
+    // Animation parameters
+    const duration = 15000; // 15 seconds in milliseconds
+    let startTime = null;
+    let isReversing = false;
+    let loopCount = 0;
+
+    // Animation loop using requestAnimationFrame
+    function animate(currentTime) {
+      if (!startTime) startTime = currentTime;
+      let elapsed = currentTime - startTime;
+      let progress = elapsed / duration;
+
+      // Handle repeat and yoyo
+      if (progress >= 1) {
+        if (isReversing) {
+          progress = 1 - (progress % 1);
+        } else {
+          progress = progress % 1;
+        }
+        startTime = currentTime - (progress * duration);
+        loopCount++;
+        // Toggle direction for yoyo effect
+        if (loopCount % 2 === 1) {
+          isReversing = !isReversing;
+        }
+      }
+
+      // Calculate base frequency values
+      let bfX = progress * 0.01 + 0.02; // base frequency x
+      let bfY = progress * 0.1 + 0.2;   // base frequency y
+
+      // Update feTurbulence baseFrequency attribute
+      feTurb.setAttribute('baseFrequency', `${bfX} ${bfY}`);
+
+      // Continue animation (repeat: -1 means infinite)
+      requestAnimationFrame(animate);
+    }
+
+    // Start the animation
+    requestAnimationFrame(animate);
+
+    // Register the MorphSVGPlugin
+    gsap.registerPlugin(MorphSVGPlugin);     
+    MorphSVGPlugin.defaultMap = "size"; // play with after gradient is done
+
+// d path keyframes
+    // frame0 is original path
+let frame0 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C938.2887 -0.770105 953.5847 6.88847 957.7232 16.0711C1000.1483 31.0179 1014.2954 110.42 983.2232 305.571C919.1164 612.684 851.496 764.383 780.361 760.667C740.916 770.887 697.412 748.522 649.848 693.571C617.644 667.544 607.527 656.669 580.981 656.362C555.891 661.062 565.863 669.561 502.981 699.362C440.098 729.163 350.857 702.003 251.223 577.071C203.223 512.071 162.723 478.071 129.723 475.071C248.21 431.324 396.454 328.006 525.251 230.099C676.268 115.301 800.549 7.94482 818.774 12.7867Z";
+
+let frame1 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C939.4561 -0.445947 945.3108 10.7606 963.818 18.7463C1011.8903 16.5946 1010.9726 117.07 967.5293 312.221C903.4225 619.334 828.355 729.132 757.22 725.416C717.775 715.843 719.423 725.934 671.859 670.983C639.655 644.956 590.776 688.61 560.519 705.623C537.345 710.897 521.922 734.188 472.684 726.654C423.446 719.119 341.288 704.42 252.967 580.195C204.26 526.509 187.105 513.433 164.004 501.948C412.936 429.534 566.2 212.993 728.943 57.6838Z";
+
+let frame2 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C932.8403 3.075 937.7284 14.1409 962.4484 18.3298C1017.3264 35.6949 1005.50221 147.489 968.8237 273.078C940.4183 370.339 897.106 475.874 858.325 552.23C821.733 624.276 789.175 670.344 776.978 658.974C768.122 636.61 754.827 626.031 740.117 623.199C723.722 640.031 632.968 719.67 605.052 726.812C524.679 747.373 245.581 564.624 272.139 506.031C443.483 433.752 494.022 320.582 574.319 210.058C612.937 156.901 658.439 104.357 727.573 57.2673Z";
+
+let frame3 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C931.7413 3.075 936.6103 13.8286 961.3304 18.0175C1022.0568 26.876 1003.28927 132.864 959.6855 245.816C914.2951 363.396 841.992 488.523 804.43 519.489C802.589 490.82 798.146 471.637 791.83 459.792C775.647 462.18 627.349 678.135 565.062 698.321C361.261 723.231 131.834 557.519 130.33 419.018C134.361 415.807 153.225 421.152 177.33 392.018C208.654 336.351 282.397 246.535 393.932 175.563C475.017 123.968 576.075 82.3326 695.33 71.0175Z";
+
+let frame4 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C947.5117 3.075 952.9375 14.5437 977.6576 18.7326C1003.07005 60.7286 1005.14268 106.646 992.21009 153.219C973.5861 220.287 923.8439 288.714 867.875 348.745C772.447 451.099 658.917 529.044 650.658 534.233C607.455 563.114 561.025 578.109 514.446 582.616C348.63 598.658 180.919 481.784 150.158 385.233C136.377 368.312 183.209 312.58 268.975 252.052C341.582 200.812 442.092 146.135 557.351 108.662C606.449 92.6984 658.224 79.857 711.658 71.7326Z";
+
+let frame5 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C952.5652 3.075 957.991 14.5437 982.7111 18.7326C1014.66 88.3107 999.651316 168.059 959.605 246.098C916.2888 330.509 843.679 412.92 769.516 478.297C680.443 556.818 589.129 610.769 543.633 614.103C425.236 622.78 251.513 401.533 126.711 359.733C115.424 348.474 141.186 311.355 201.835 268.018C243.992 237.896 303.003 204.771 378.143 175.238C457.483 144.054 554.805 116.876 669.255 101.47Z";
+
+let frame6 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C1001.82493 18.2226 965.2151 6.64232 990.81603 16.8023C1021.8752 111.594 970.6517 222.032 889.861 317.219C770.828 457.463 587.613 564.599 508.816 539.803C460.244 524.717 353.445 395.316 252.834 359.848C206.028 343.347 160.562 347.176 122.92 392.301C103.481 354 110.851 312.532 140.681 274.278C173.812 231.788 234.651 193.262 317.234 167.442C390.288 144.602 480.357 131.705 583.315 134.803C621.019 129.793 644.785 112.894 677.359 99.5397Z";
+
+let frame7 = "M818.774 12.7867C843.087 15.6077 874.155 7.50434 914.8377 0.0620076C930.7413 2.19274 941.603 3.30099 963.5252 23.6146C1009.92339 38.5668 1009.31021 112.504 977.1491 203.895C947.0649 289.385 889.376 390.148 816.739 472.19C750.553 546.946 671.957 606.16 590.525 624.115C564.318 631.476 532.531 624.785 497.237 609.305C371.091 553.978 200.141 386.373 78.989 346.78C74.852 302.89 179.089 244.252 413.995 184.199C470.243 169.819 533.983 155.359 605.521 141Z";
+
+let frame8 = "M 818.774 12.7867 C 843.087 15.6077 874.155 7.5043 914.8377 0.062 C 940.3593 1.2011 940.2418 8.1806 956.9338 21.6496 C 997.7417 32.8565 1007.2942 84.0377 995.0093 153.752 C 970.4999 292.839 859.07 505.695 735.508 622.056 C 684.686 669.917 631.811 701.452 582.088 704.815 C 559.864 702.65 522.313 675.215 480.829 644.955 C 433.674 610.559 381.436 572.512 340.851 563.784 C 249.89 559.439 193.505 539.928 156.346 518.25 C 103.143 487.213 89.353 451.735 69.923 449.969 C 149.46 435.352 311.523 330.783 464.008 226.57 Z";
+
+let frame9 = "M 818.774 12.7867 C 843.087 15.6077 874.155 7.5043 914.8377 0.062 C 918.4519 -1.0251 940.8452 9.3478 961.3512 19.4445 C 1000.1065 31.2871 1007.6383 102.256 993.145 195.868 C 974.165 318.459 917.412 479.882 843.545 598.196 C 800.64 666.917 751.961 721.095 701.557 744.671 C 678.133 731.288 640.028 701.616 596.246 679.565 C 562.426 662.531 525.219 650.044 488.774 653.125 C 391.209 650.862 309.413 617.807 246.786 579.709 C 162.952 528.709 113.471 468.674 106.506 461.372 C 184.045 447.298 334.477 344.664 476.98 239.936 Z";
+
+//farright details coordinates
+let frame0_1 ="M 971 124 C 911 286 799 492 570 659";
+
+let frame1_1 ="M 971 124 C 911 286 799 492 628 667";
+
+let frame2_1 ="M 984 121 C 932 298 832 508 740 623 Q 689 610 652 697";
+
+let frame3_1 ="M 987 86 C 952 284 952 299 793 459 Q 753 413 700 550";
+
+let frame4_1 ="M 962 222 C 821 347 732 401 632 418 Q 685 455 654 531";
+
+let frame5_1 ="M 924 303 C905 303 743 496 566 496 Q 628 518 590 593";
+
+let frame6_1 ="M 786 418 C 760 420 647 481 489 462 Q 526 485 470 516";
+
+let frame7_1 ="M 980 101 C 935 196 735 385 643 418";
+
+let frame8_1 ="M 964 91 C 935 196 735 385 626 487";
+
+let frame9_1 ="M 964 103 C 935 196 641 589 566 607";
+
+// middle details coordinates
+let frame0_2 ="M 942 83 C 867 212 814 279 741 351";
+
+let frame1_2 ="M 942 83 C 904 207 841 285 719 316";
+
+let frame2_2 ="M 950 61 C 872 186 828 252 722 306";
+
+let frame3_2 ="M 937 67 C 872 186 828 252 706 300";
+
+let frame4_2 ="M 967 37 C 906 135 808 159 654 208";
+
+let frame5_2 ="M 953 57 C 901 156 860 181 755 225";
+
+let frame6_2 ="M 953 57 C 891 149 839 166 748 203";
+
+let frame7_2 ="M 944 76 C 921 143 767 246 667 273";
+
+let frame8_2 ="M 935 71 C 899 126 767 246 699 295";
+
+let frame9_2 ="M 926 64 C 899 126 774 249 707 315";
+
+//topleft details coordinates
+
+let frame0_3 ="M 845 34 C 754 -27 854 95 407 397";
+
+let frame1_3 ="M 844 34 C 789 -12 728 106 663 206";
+
+let frame2_3 ="M 845 34 C 801 -5 756 61 656 127";
+
+let frame3_3 ="M 700 69 C 658 103 573 206 570 220";
+
+let frame4_3 ="M 712 72 C 683 103 598 158 593 177";
+
+let frame5_3 ="M 775 77 C 756 88 683 101 669 102";
+
+let frame6_3 ="M 855 66 C 784 90 585 139 585 135";
+
+let frame7_3 ="M 695 104 C 689 109 608 141 606 141";
+
+let frame8_3 ="M 862 32 C 758 -7 774 91 701 149";
+
+let frame9_3 ="M 844 34 C 789 -12 728 106 663 206";
+ 
+// Create a timeline to morph through all frames
+    const tl = gsap.timeline({ repeat: -1, yoyo: false}); // Repeat indefinitely, yoyo for smooth back-and-forth
+
+     tl.to("#startingFrame", { morphSVG: frame1, duration: 1.3, ease:"steps(60)" })
+      .to("#startingFrame", { morphSVG: frame2, duration: 1.4, ease:"steps(60)" })
+      .to("#startingFrame", { morphSVG: frame3, duration: 1.3, ease:"steps(60)" })
+      .to("#startingFrame", { morphSVG: frame4, duration: 1, ease:"steps(60)" })
+     .to("#startingFrame", { morphSVG: {shape:frame5, shapeIndex:0}, duration: 1.3, ease:"steps(60)" })
+     .to("#startingFrame", { morphSVG: frame6, duration: 1.4, ease:"steps(60)" })
+     .to("#startingFrame", { morphSVG: {shape:frame7, shapeIndex:11 /*11 also works*/}, duration: 1.3, ease:"steps(60)" }) 
+     .to("#startingFrame", { morphSVG: frame8, duration: 1, ease:"steps(60)" })
+     .to("#startingFrame", { morphSVG: frame9, duration: 1.3, ease:"steps(60)" })
+      .to("#startingFrame", { morphSVG: frame0, duration: 1.4, ease:"steps(60)" });
+
+    const tl1 = gsap.timeline({ repeat: -1, yoyo: false});
+
+      tl1.to("#farright", { morphSVG: frame1_1, duration: 1.3, ease:"steps(60)" })
+      .to("#farright", { morphSVG: frame2_1, duration: 1.3, ease:"circ.in" })
+      .to("#farright", { morphSVG: frame3_1, duration: 1.3, ease:"none" })
+      .to("#farright", { morphSVG: frame4_1, duration: 1, ease:"power1.out" })
+     .to("#farright", { morphSVG: frame5_1, duration: 1.3, ease:"steps(60)" })
+     .to("#farright", { morphSVG: frame6_1, duration: 0.7, ease:"steps(60)" })
+     .to("#farright", { morphSVG: frame7_1, duration: 1.3, ease:"steps(60)" }) 
+     .to("#farright", { morphSVG: frame8_1, duration: 1, ease:"steps(60)" })
+     .to("#farright", { morphSVG: frame9_1, duration: 1.7, ease:"steps(60)" })
+      .to("#farright", { morphSVG: frame0_1, duration: 1.8, ease:"steps(60)" });
+
+    const tl2 = gsap.timeline({ repeat: -1, yoyo: false});
+
+      tl2.to("#middle", { morphSVG: frame1_2, duration: 1.2, ease:"steps(60)" })
+      .to("#middle", { morphSVG: frame2_2, duration: 1.3, ease:"steps(60)" })
+      .to("#middle", { morphSVG: frame3_2, duration: 1, ease:"steps(60)" })
+      .to("#middle", { morphSVG: frame4_2, duration: 1.4, ease:"steps(60)" })
+     .to("#middle", { morphSVG: frame5_2, duration: 1.5, ease:"steps(60)" })
+     .to("#middle", { morphSVG: frame6_2, duration: 1.4, ease:"steps(60)" })
+     .to("#middle", { morphSVG: frame7_2, duration: 1.1, ease:"steps(60)" }) 
+     .to("#middle", { morphSVG: frame8_2, duration: 1.1, ease:"steps(60)" })
+     .to("#middle", { morphSVG: frame9_2, duration: 1.4, ease:"steps(60)" })
+      .to("#middle", { morphSVG: frame0_2, duration: 1.3, ease:"steps(60)" });
+
+    const tl3 = gsap.timeline({ repeat: -1, yoyo: false});
+
+      tl3.to("#topleft", { morphSVG: frame1_3, duration: 1.3, ease:"sine.inOut" })
+      .to("#topleft", { morphSVG: frame2_3, duration: 1.4, ease:"steps(60)" })
+      .to("#topleft", { morphSVG: frame3_3, duration: 1.3, ease:"steps(60)" })
+      .to("#topleft", { morphSVG: frame4_3, duration: 1, ease:"steps(60)" })
+     .to("#topleft", { morphSVG: frame5_3, duration: 1.3, ease:"none" })
+     .to("#topleft", { morphSVG: frame6_3, duration: 1.4, ease:"steps(60)" })
+     .to("#topleft", { morphSVG: frame7_3, duration: 1.3, ease:"steps(60)" }) 
+     .to("#topleft", { morphSVG: frame8_3, duration: 1, ease:"steps(60)" })
+     .to("#topleft", { morphSVG: frame9_3, duration: 1.3, ease:"steps(60)" })
+      .to("#topleft", { morphSVG: frame0_3, duration: 1.4, ease:"sine.inOut" });
+	</script>
+</body>
+</html>
